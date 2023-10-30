@@ -1,0 +1,24 @@
+{
+    "tasks": [
+        {
+            "label": "Build JSON",
+            "command": "flutter packages pub run build_runner watch --delete-conflicting-outputs",
+            "type": "shell",
+            "problemMatcher": "$dart-build_runner",
+            "dependsOn": [
+                "Update Packages"
+            ],
+            "isBackground": true,
+            "runOptions": {
+                "runOn": "folderOpen",
+            },
+        },
+        {
+            "label": "Update Packages",
+            "command": "flutter pub get",
+            "type": "shell",
+            "problemMatcher": "$dart-build_runner",
+            "isBackground": true,
+        },
+    ]
+}
